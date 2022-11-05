@@ -28,8 +28,6 @@ public class CucumberTests {
     Scraper scraper;
     HttpClient client;
 
-    int alertLength;
-
     List<WebElement> alerts;
 
     @Before
@@ -48,7 +46,6 @@ public class CucumberTests {
         driver = null;
         scraperDriver.quit();
         scraperDriver = null;
-        alertLength = 0;
     }
 
     @Given("I am a user of marketalertum")
@@ -86,7 +83,6 @@ public class CucumberTests {
 
     @Given("I am an administrator of the website and I upload {int} alerts")
     public void iAmAnAdministratorOfTheWebsiteAndIUploadAlerts(int arg0) {
-        alertLength = arg0;
         scraper = new Scraper(scraperDriver, new WebDriverWait(scraperDriver, Duration.ofSeconds(1)));
         ArrayList<Entry> entries = scraper.getEntries(arg0);
         for (Entry ent : entries) {
@@ -151,7 +147,6 @@ public class CucumberTests {
 
     @Given("I am an administrator of the website and I upload more than {int} alerts")
     public void iAmAnAdministratorOfTheWebsiteAndIUploadMoreThanAlerts(int arg0) {
-        alertLength = arg0;
         scraper = new Scraper(scraperDriver, new WebDriverWait(scraperDriver, Duration.ofSeconds(1)));
         ArrayList<Entry> entries = scraper.getEntries(arg0+1);
         for (Entry ent : entries) {
@@ -167,9 +162,8 @@ public class CucumberTests {
 
     @Given("I am an administrator of the website and I upload an alert of type {int}")
     public void iAmAnAdministratorOfTheWebsiteAndIUploadAnAlertOfType(int arg0) {
-        alertLength = 1;
         scraper = new Scraper(scraperDriver, new WebDriverWait(scraperDriver, Duration.ofSeconds(1)));
-        ArrayList<Entry> entries = scraper.getEntries(alertLength);
+        ArrayList<Entry> entries = scraper.getEntries(1);
         for (Entry ent : entries) {
             client.addAlert(ent);
         }
