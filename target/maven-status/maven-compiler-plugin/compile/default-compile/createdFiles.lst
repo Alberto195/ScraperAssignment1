@@ -1,0 +1,4 @@
+org/assignment1/models/Entry.class
+org/assignment1/api/HttpClient.class
+org/assignment1/Main.class
+org/assignment1/scraper/Scraper.class
