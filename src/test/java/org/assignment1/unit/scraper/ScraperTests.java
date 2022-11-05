@@ -8,7 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -65,7 +64,7 @@ public class ScraperTests {
                 driver.findElement(Mockito.any()).getAttribute(Mockito.any())
         ).thenReturn("attribute");
         Mockito.when(
-                driver.findElement(By.xpath(Mockito.any())).getText()
+                driver.findElement(Mockito.any()).getText()
         ).thenReturn("heading");
         Mockito.when(
                 wait.until(Mockito.any())
