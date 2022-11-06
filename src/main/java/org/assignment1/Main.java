@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "/home/albert/Downloads/chromedriver_linux64/chromedriver");
+        System.out.println("the world has been set up");
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
 
@@ -23,6 +24,6 @@ public class Main {
         for (Entry ent : entries) {
             client.addAlert(ent);
         }
-        System.out.println(entries.size() + " added to website");
+        System.out.println(entries.size() + " alert added to website");
     }
 }

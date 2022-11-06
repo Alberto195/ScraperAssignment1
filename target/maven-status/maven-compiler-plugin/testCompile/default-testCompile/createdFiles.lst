@@ -1,3 +1,4 @@
+org/assignment1/unit/MainTests.class
 org/assignment1/web_automation/CucumberTests.class
 org/assignment1/unit/api/HttpClientTest.class
 org/assignment1/web_automation/TestRunner.class

@@ -84,8 +84,7 @@ public class Scraper {
     public String transformPrice(String price) {
         String newPrice = price.replaceAll("[\\D]", "");
         if (!newPrice.equals("")) {
-            int newPriceString = Integer.parseInt(newPrice);
-            return Integer.toString(newPriceString);
+            return newPrice;
         }
 
         return "";
