@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: org.assignment1.web_automation.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 51.605 s - in org.assignment1.web_automation.TestRunner
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 31.59 s <<< FAILURE! - in org.assignment1.web_automation.TestRunner
+Alert limit  Time elapsed: 8.423 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <5> but was: <0>
+
+Icon check  Time elapsed: 8.893 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+

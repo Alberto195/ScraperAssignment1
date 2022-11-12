@@ -32,14 +32,14 @@ public class Scraper {
         this.entries = new ArrayList<>();
     }
 
-    public ArrayList<Entry> getEntries(int amount) {
+    public ArrayList<Entry> getEntries(int amount, String searchText, int type) {
         try {
             driver.get("https://www.ebay.com/");
             String findButtonXpath = "//*[@id=\"gh-ac\"]";
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath(findButtonXpath)));
 
             WebElement searchField = driver.findElement(By.xpath(findButtonXpath));
-            searchField.sendKeys("ps5");
+            searchField.sendKeys(searchText);
             WebElement searchButton = driver.findElement(By.xpath("//*[@id=\"gh-btn\"]"));
             searchButton.submit();
             wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@id=\"mainContent\"]"))));
@@ -69,7 +69,7 @@ public class Scraper {
                 Document doc = Jsoup.parse(html);
                 String description = doc.body().text();
 
-                entries.add(new Entry(heading, description, productUrl, imageUrl, newPrice));
+                entries.add(new Entry(Integer.toString(type), heading, description, productUrl, imageUrl, newPrice));
                 driver.switchTo().window(windowToCloseHandle).close();
                 driver.switchTo().window(originalWindow);
             }

@@ -12,12 +12,17 @@ public class EntryTests {
 
     @BeforeEach
     public void setup() {
-        entry = new Entry("testHeading", "testDescription", "testUrl", "testImageUrl", "testPrice");
+        entry = new Entry(Integer.toString(0), "testHeading", "testDescription", "testUrl", "testImageUrl", "testPrice");
     }
 
     @AfterEach
     public void teardown() {
         entry = null;
+    }
+
+    @Test
+    public void getTypeTest() {
+        Assertions.assertEquals("0", entry.getType());
     }
 
     @Test

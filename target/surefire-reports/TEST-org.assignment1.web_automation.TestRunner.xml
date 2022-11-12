@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.assignment1.web_automation.TestRunner" time="51.605" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.assignment1.web_automation.TestRunner" time="31.59" tests="5" errors="0" skipped="0" failures="2">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -17,7 +17,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/home/albert/.jdks/corretto-1.8.0_312/jre/lib/amd64"/>
-    <property name="sun.java.command" value="/home/albert/Downloads/Assignment1/target/surefire/surefirebooter8289320679551731846.jar /home/albert/Downloads/Assignment1/target/surefire 2022-11-05T23-26-22_367-jvmRun1 surefire410931563477185525tmp surefire_06024517977751434252tmp"/>
+    <property name="sun.java.command" value="/home/albert/Downloads/Assignment1/target/surefire/surefirebooter2837749436926115584.jar /home/albert/Downloads/Assignment1/target/surefire 2022-11-12T17-13-22_330-jvmRun2 surefire3230612630155286845tmp surefire_11229785661753701003tmp"/>
     <property name="surefire.test.class.path" value="/home/albert/Downloads/Assignment1/target/test-classes:/home/albert/Downloads/Assignment1/target/classes:/home/albert/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar:/home/albert/.m2/repository/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar:/home/albert/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/albert/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar:/home/albert/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/albert/.m2/repository/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar:/home/albert/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.1/junit-jupiter-params-5.9.1.jar:/home/albert/.m2/repository/org/junit/platform/junit-platform-suite/1.9.1/junit-platform-suite-1.9.1.jar:/home/albert/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.1/junit-platform-suite-api-1.9.1.jar:/home/albert/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.1/junit-platform-suite-engine-1.9.1.jar:/home/albert/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.1/junit-platform-suite-commons-1.9.1.jar:/home/albert/.m2/repository/org/junit/platform/junit-platform-console-standalone/1.9.1/junit-platform-console-standalone-1.9.1.jar:/home/albert/.m2/repository/org/junit/platform/junit-platform-reporting/1.9.1/junit-platform-reporting-1.9.1.jar:/home/albert/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.1/junit-platform-launcher-1.9.1.jar:/home/albert/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-java/4.0.0/selenium-java-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-api/4.0.0/selenium-api-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.0.0/selenium-chrome-driver-4.0.0.jar:/home/albert/.m2/repository/com/google/auto/service/auto-service-annotations/1.0/auto-service-annotations-1.0.jar:/home/albert/.m2/repository/com/google/auto/service/auto-service/1.0/auto-service-1.0.jar:/home/albert/.m2/repository/com/google/auto/auto-common/1.0/auto-common-1.0.jar:/home/albert/.m2/repository/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.jar:/home/albert/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/albert/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/albert/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/albert/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/home/albert/.m2/repository/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar:/home/albert/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.0.0/selenium-chromium-driver-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-json/4.0.0/selenium-json-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.0.0/selenium-devtools-v85-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v93/4.0.0/selenium-devtools-v93-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v94/4.0.0/selenium-devtools-v94-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v95/4.0.0/selenium-devtools-v95-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.0.0/selenium-edge-driver-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.0.0/selenium-firefox-driver-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-firefox-xpi-driver/4.0.0/selenium-firefox-xpi-driver-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.0.0/selenium-ie-driver-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/4.0.0/selenium-opera-driver-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.0.0/selenium-remote-driver-4.0.0.jar:/home/albert/.m2/repository/com/beust/jcommander/1.81/jcommander-1.81.jar:/home/albert/.m2/repository/io/netty/netty-buffer/4.1.68.Final/netty-buffer-4.1.68.Final.jar:/home/albert/.m2/repository/io/netty/netty-codec-http/4.1.67.Final/netty-codec-http-4.1.67.Final.jar:/home/albert/.m2/repository/io/netty/netty-codec/4.1.67.Final/netty-codec-4.1.67.Final.jar:/home/albert/.m2/repository/io/netty/netty-handler/4.1.67.Final/netty-handler-4.1.67.Final.jar:/home/albert/.m2/repository/io/netty/netty-common/4.1.68.Final/netty-common-4.1.68.Final.jar:/home/albert/.m2/repository/io/netty/netty-transport-native-epoll/4.1.67.Final/netty-transport-native-epoll-4.1.67.Final.jar:/home/albert/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.67.Final/netty-transport-native-kqueue-4.1.67.Final.jar:/home/albert/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.67.Final/netty-transport-native-unix-common-4.1.67.Final.jar:/home/albert/.m2/repository/io/netty/netty-transport/4.1.68.Final/netty-transport-4.1.68.Final.jar:/home/albert/.m2/repository/io/netty/netty-resolver/4.1.68.Final/netty-resolver-4.1.68.Final.jar:/home/albert/.m2/repository/io/opentelemetry/opentelemetry-api/1.6.0/opentelemetry-api-1.6.0.jar:/home/albert/.m2/repository/io/opentelemetry/opentelemetry-context/1.6.0/opentelemetry-context-1.6.0.jar:/home/albert/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.6.0/opentelemetry-exporter-logging-1.6.0.jar:/home/albert/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.6.0-alpha/opentelemetry-sdk-metrics-1.6.0-alpha.jar:/home/albert/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.6.0/opentelemetry-sdk-common-1.6.0.jar:/home/albert/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.6.0/opentelemetry-sdk-extension-autoconfigure-spi-1.6.0.jar:/home/albert/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.6.0-alpha/opentelemetry-sdk-extension-autoconfigure-1.6.0-alpha.jar:/home/albert/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.6.0/opentelemetry-sdk-trace-1.6.0.jar:/home/albert/.m2/repository/io/opentelemetry/opentelemetry-api-metrics/1.6.0-alpha/opentelemetry-api-metrics-1.6.0-alpha.jar:/home/albert/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.6.0/opentelemetry-sdk-1.6.0.jar:/home/albert/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.6.0-alpha/opentelemetry-semconv-1.6.0-alpha.jar:/home/albert/.m2/repository/io/ous/jtoml/2.0.0/jtoml-2.0.0.jar:/home/albert/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/albert/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/home/albert/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/home/albert/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/home/albert/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/home/albert/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/home/albert/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/home/albert/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/home/albert/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/home/albert/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/albert/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-http/4.0.0/selenium-http-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.0.0/selenium-safari-driver-4.0.0.jar:/home/albert/.m2/repository/org/seleniumhq/selenium/selenium-support/4.0.0/selenium-support-4.0.0.jar:/home/albert/.m2/repository/org/jsoup/jsoup/1.15.3/jsoup-1.15.3.jar:/home/albert/.m2/repository/com/squareup/okhttp3/okhttp/4.10.0/okhttp-4.10.0.jar:/home/albert/.m2/repository/com/squareup/okio/okio-jvm/3.0.0/okio-jvm-3.0.0.jar:/home/albert/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.5.31/kotlin-stdlib-jdk8-1.5.31.jar:/home/albert/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.5.31/kotlin-stdlib-jdk7-1.5.31.jar:/home/albert/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.31/kotlin-stdlib-common-1.5.31.jar:/home/albert/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.6.20/kotlin-stdlib-1.6.20.jar:/home/albert/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/home/albert/.m2/repository/org/mockito/mockito-core/3.6.0/mockito-core-3.6.0.jar:/home/albert/.m2/repository/net/bytebuddy/byte-buddy/1.10.15/byte-buddy-1.10.15.jar:/home/albert/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.15/byte-buddy-agent-1.10.15.jar:/home/albert/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/home/albert/.m2/repository/io/cucumber/cucumber-java/6.9.0/cucumber-java-6.9.0.jar:/home/albert/.m2/repository/io/cucumber/cucumber-core/6.9.0/cucumber-core-6.9.0.jar:/home/albert/.m2/repository/io/cucumber/cucumber-gherkin/6.9.0/cucumber-gherkin-6.9.0.jar:/home/albert/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.9.0/cucumber-gherkin-messages-6.9.0.jar:/home/albert/.m2/repository/io/cucumber/messages/13.2.0/messages-13.2.0.jar:/home/albert/.m2/repository/io/cucumber/tag-expressions/3.0.0/tag-expressions-3.0.0.jar:/home/albert/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/home/albert/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/home/albert/.m2/repository/io/cucumber/cucumber-plugin/6.9.0/cucumber-plugin-6.9.0.jar:/home/albert/.m2/repository/io/cucumber/docstring/6.9.0/docstring-6.9.0.jar:/home/albert/.m2/repository/io/cucumber/html-formatter/9.0.0/html-formatter-9.0.0.jar:/home/albert/.m2/repository/io/cucumber/create-meta/2.0.4/create-meta-2.0.4.jar:/home/albert/.m2/repository/io/cucumber/cucumber-junit/6.9.0/cucumber-junit-6.9.0.jar:/home/albert/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/albert/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/albert/.m2/repository/org/json/json/20180130/json-20180130.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/albert"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/albert/Downloads/Assignment1/target/surefire/surefirebooter8289320679551731846.jar:/home/albert/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar"/>
+    <property name="surefire.real.class.path" value="/home/albert/Downloads/Assignment1/target/surefire/surefirebooter2837749436926115584.jar:/home/albert/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar"/>
     <property name="sun.boot.class.path" value="/home/albert/.jdks/corretto-1.8.0_312/jre/lib/resources.jar:/home/albert/.jdks/corretto-1.8.0_312/jre/lib/rt.jar:/home/albert/.jdks/corretto-1.8.0_312/jre/lib/sunrsasign.jar:/home/albert/.jdks/corretto-1.8.0_312/jre/lib/jsse.jar:/home/albert/.jdks/corretto-1.8.0_312/jre/lib/jce.jar:/home/albert/.jdks/corretto-1.8.0_312/jre/lib/charsets.jar:/home/albert/.jdks/corretto-1.8.0_312/jre/lib/jfr.jar:/home/albert/.jdks/corretto-1.8.0_312/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="1.8.0_312-b07"/>
@@ -59,9 +59,227 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="Valid Login" classname="org.assignment1.web_automation.TestRunner" time="4.7"/>
-  <testcase name="Invalid Login" classname="org.assignment1.web_automation.TestRunner" time="2.303"/>
-  <testcase name="Alert layout" classname="org.assignment1.web_automation.TestRunner" time="13.803"/>
-  <testcase name="Alert limit" classname="org.assignment1.web_automation.TestRunner" time="21.95"/>
-  <testcase name="Icon check" classname="org.assignment1.web_automation.TestRunner" time="8.81"/>
+  <testcase name="Valid Login" classname="org.assignment1.web_automation.TestRunner" time="3.598"/>
+  <testcase name="Invalid Login" classname="org.assignment1.web_automation.TestRunner" time="2.238"/>
+  <testcase name="Alert layout" classname="org.assignment1.web_automation.TestRunner" time="8.392"/>
+  <testcase name="Alert limit" classname="org.assignment1.web_automation.TestRunner" time="8.423">
+    <failure message="expected: &lt;5&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <5> but was: <0>
+]]></failure>
+    <system-err><![CDATA[Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 41177
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1668262418,932][SEVERE]: bind() failed: Cannot assign requested address (99)
+ChromeDriver was started successfully.
+Nov 12, 2022 5:13:39 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Nov 12, 2022 5:13:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 88, so returning the closest version found: 85
+Nov 12, 2022 5:13:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 88 of 85
+Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 49332
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[166826241Chro9m,e2D0r6i]v[eSrE VwEaRsE ]s:t abritnedd( )s ufcceasislfeudl:l yC.a
+nnot assign requested address (99)
+Nov 12, 2022 5:13:39 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Nov 12, 2022 5:13:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 88, so returning the closest version found: 85
+Nov 12, 2022 5:13:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 88 of 85
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="prcIsum"]"}
+  (Session info: chrome=88.0.4324.96)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'albert-ge75-raider-10sgs', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-52-generic', java.version: '1.8.0_312'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dde15d3f5606c660aaf0217fcdf7e8a7, findElement {using=xpath, value=//*[@id="prcIsum"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.96, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /tmp/.com.google.Chrome.oBStmP}, goog:chromeOptions: {debuggerAddress: localhost:35057}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:35057/devtoo..., se:cdpVersion: 88.0.4324.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dde15d3f5606c660aaf0217fcdf7e8a7
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.assignment1.scraper.Scraper.getEntries(Scraper.java:64)
+	at org.assignment1.web_automation.CucumberTests.iAmAnAdministratorOfTheWebsiteAndIUploadMoreThanAlerts(CucumberTests.java:160)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:116)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]></system-err>
+  </testcase>
+  <testcase name="Icon check" classname="org.assignment1.web_automation.TestRunner" time="8.893">
+    <failure message="expected: &lt;1&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+]]></failure>
+    <system-err><![CDATA[Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 34081
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1668262427,339][SEVERE]: bind() failed: Cannot assign requested address (99)
+Nov 12, 2022 5:13:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Nov 12, 2022 5:13:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 88, so returning the closest version found: 85
+Nov 12, 2022 5:13:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 88 of 85
+Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 34013
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[C1h6r6o8m2e6D2r4i2v7e,r6 2w9a]s[ SsEtVaErRtEe]d:  sbuicncde(s)s ffualillye.d
+: Cannot assign requested address (99)
+Nov 12, 2022 5:13:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Nov 12, 2022 5:13:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 88, so returning the closest version found: 85
+Nov 12, 2022 5:13:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 88 of 85
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="prcIsum"]"}
+  (Session info: chrome=88.0.4324.96)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'albert-ge75-raider-10sgs', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-52-generic', java.version: '1.8.0_312'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [77124a4adaf93992b3b96b715f90ca9a, findElement {using=xpath, value=//*[@id="prcIsum"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.96, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /tmp/.com.google.Chrome.wBwe7O}, goog:chromeOptions: {debuggerAddress: localhost:41727}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:41727/devtoo..., se:cdpVersion: 88.0.4324.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 77124a4adaf93992b3b96b715f90ca9a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at org.assignment1.scraper.Scraper.getEntries(Scraper.java:64)
+	at org.assignment1.web_automation.CucumberTests.iAmAnAdministratorOfTheWebsiteAndIUploadAnAlertOfType(CucumberTests.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:116)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]></system-err>
+  </testcase>
 </testsuite>

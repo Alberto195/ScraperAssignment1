@@ -26,9 +26,9 @@ public class HttpClientTest {
     public void setup() {
         httpClient = Mockito.mock(OkHttpClient.class);
         this.client = new HttpClient(httpClient);
-        alert = new Entry("testHeading", "testDescription", "testUrl", "testImageUrl", "100");
+        alert = new Entry("6", "testHeading", "testDescription", "testUrl", "testImageUrl", "100");
         RequestBody formBody = new FormBody.Builder()
-                .add("alertType", Integer.toString(6))
+                .add("alertType", alert.getType())
                 .add("heading", alert.getHeading())
                 .add("description", alert.getDescription())
                 .add("url", alert.getUrl())

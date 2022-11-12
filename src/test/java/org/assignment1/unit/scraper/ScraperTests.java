@@ -14,6 +14,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.ArrayList;
 
 public class ScraperTests {
+    static final String searchText = "ps5";
+    static final int alertType = 6;
 
     @Mock
     private WebDriver driver;
@@ -76,7 +78,7 @@ public class ScraperTests {
                 locator.window(Mockito.any())
         ).thenReturn(driver);
 
-        ArrayList<Entry> list = scraper.getEntries(1);
+        ArrayList<Entry> list = scraper.getEntries(1, searchText, alertType);
         Assertions.assertEquals(1, list.size());
         Entry test = list.get(0);
         Assertions.assertEquals("heading", test.getHeading());
@@ -96,7 +98,7 @@ public class ScraperTests {
                 wait.until(Mockito.any())
         ).thenReturn(element);
 
-        ArrayList<Entry> list = scraper.getEntries(1);
+        ArrayList<Entry> list = scraper.getEntries(1, searchText, alertType);
         Assertions.assertEquals(0, list.size());
     }
 }

@@ -20,7 +20,7 @@ public class Main {
         Scraper scraper = new Scraper(driver, wait);
         HttpClient client = new HttpClient(new OkHttpClient());
 
-        ArrayList<Entry> entries = scraper.getEntries(1);
+        ArrayList<Entry> entries = scraper.getEntries(1, "ps5", 6);
         for (Entry ent : entries) {
             client.addAlert(ent);
         }

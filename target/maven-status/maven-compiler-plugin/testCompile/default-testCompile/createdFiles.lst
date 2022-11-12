@@ -1,6 +1,7 @@
-org/assignment1/unit/MainTests.class
-org/assignment1/web_automation/CucumberTests.class
+org/assignment1/web_automation/page_objects/AlertPage.class
 org/assignment1/unit/api/HttpClientTest.class
-org/assignment1/web_automation/TestRunner.class
 org/assignment1/unit/scraper/ScraperTests.class
+org/assignment1/web_automation/CucumberTests.class
+org/assignment1/web_automation/TestRunner.class
+org/assignment1/web_automation/page_objects/EntryMarketAlertUmPage.class
 org/assignment1/unit/model/EntryTests.class
