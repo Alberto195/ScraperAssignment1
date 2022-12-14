@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HttpClient.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment1</a> &gt; <a href="index.source.html" class="el_package">org.assignment1.api</a> &gt; <span class="el_source">HttpClient.java</span></div><h1>HttpClient.java</h1><pre class="source lang-java linenums">package org.assignment1.api;
+
+import okhttp3.*;
+import org.assignment1.models.Entry;
+import org.json.JSONObject;
+
+import java.io.IOException;
+
+public class HttpClient {
+
+<span class="fc" id="L11">    private final String userId = &quot;a338083d-1742-421a-be40-5978848942df&quot;;</span>
+    OkHttpClient client;
+
+<span class="fc" id="L14">    public HttpClient(OkHttpClient client) {</span>
+<span class="fc" id="L15">        this.client = client;</span>
+<span class="fc" id="L16">    }</span>
+
+    public boolean addAlert(Entry alert) {
+<span class="fc" id="L19">        JSONObject jsonObject = new JSONObject();</span>
+<span class="fc" id="L20">        jsonObject.put(&quot;alertType&quot;, 6)</span>
+<span class="fc" id="L21">                .put(&quot;heading&quot;, alert.getHeading())</span>
+<span class="fc" id="L22">                .put(&quot;description&quot;, alert.getDescription())</span>
+<span class="fc" id="L23">                .put(&quot;url&quot;, alert.getUrl())</span>
+<span class="fc" id="L24">                .put(&quot;imageUrl&quot;, alert.getImageUrl())</span>
+<span class="fc" id="L25">                .put(&quot;postedBy&quot;, userId)</span>
+<span class="fc" id="L26">                .put(&quot;priceInCents&quot;, Integer.parseInt(alert.getPriceInCents()));</span>
+
+<span class="fc" id="L28">        RequestBody jsonBody = RequestBody.create(jsonObject.toString(), MediaType.parse(&quot;application/json; charset=utf-8&quot;));</span>
+
+<span class="fc" id="L30">        Request request = new Request.Builder()</span>
+<span class="fc" id="L31">                .url(&quot;https://api.marketalertum.com/Alert&quot;)</span>
+<span class="fc" id="L32">                .addHeader(&quot;Content-Type&quot;, &quot;application/json&quot;)</span>
+<span class="fc" id="L33">                .post(jsonBody)</span>
+<span class="fc" id="L34">                .build();</span>
+
+        try {
+<span class="fc" id="L37">            Call call = client.newCall(request);</span>
+<span class="fc" id="L38">            Response response = call.execute();</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">            return response.code() == 201;</span>
+<span class="fc" id="L40">        } catch (IOException e) {</span>
+<span class="fc" id="L41">            e.printStackTrace();</span>
+<span class="fc" id="L42">            return false;</span>
+        }
+    }
+
+    public boolean purgeAlerts() {
+<span class="fc" id="L47">        Request request = new Request.Builder()</span>
+<span class="fc" id="L48">                .url(&quot;https://api.marketalertum.com/Alert?userId=&quot; + userId)</span>
+<span class="fc" id="L49">                .delete()</span>
+<span class="fc" id="L50">                .build();</span>
+
+        try {
+<span class="fc" id="L53">            Response response = client.newCall(request).execute();</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">            return response.code() == 200;</span>
+<span class="fc" id="L55">        } catch (IOException e) {</span>
+<span class="fc" id="L56">            e.printStackTrace();</span>
+<span class="fc" id="L57">            return false;</span>
+        }
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

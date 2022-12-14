@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment1</a> &gt; <a href="index.source.html" class="el_package">org.assignment1</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package org.assignment1;
+
+import okhttp3.OkHttpClient;
+import org.assignment1.api.HttpClient;
+import org.assignment1.models.Entry;
+import org.assignment1.scraper.Scraper;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+import java.util.ArrayList;
+
+<span class="nc" id="L13">public class Main {</span>
+    public static void main(String[] args) {
+<span class="nc" id="L15">        System.setProperty(&quot;webdriver.chrome.driver&quot;, &quot;/home/albert/Downloads/chromedriver_linux64/chromedriver&quot;);</span>
+<span class="nc" id="L16">        System.out.println(&quot;the world has been set up&quot;);</span>
+<span class="nc" id="L17">        WebDriver driver = new ChromeDriver();</span>
+<span class="nc" id="L18">        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));</span>
+
+<span class="nc" id="L20">        Scraper scraper = new Scraper(driver, wait);</span>
+<span class="nc" id="L21">        HttpClient client = new HttpClient(new OkHttpClient());</span>
+
+<span class="nc" id="L23">        ArrayList&lt;Entry&gt; entries = scraper.getEntries(1, &quot;ps5&quot;, 6);</span>
+<span class="nc bnc" id="L24" title="All 2 branches missed.">        for (Entry ent : entries) {</span>
+<span class="nc" id="L25">            client.addAlert(ent);</span>
+<span class="nc" id="L26">        }</span>
+<span class="nc" id="L27">        System.out.println(entries.size() + &quot; alert added to website&quot;);</span>
+<span class="nc" id="L28">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

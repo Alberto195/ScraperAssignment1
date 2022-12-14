@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Scraper.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment1</a> &gt; <a href="index.source.html" class="el_package">org.assignment1.scraper</a> &gt; <span class="el_source">Scraper.java</span></div><h1>Scraper.java</h1><pre class="source lang-java linenums">package org.assignment1.scraper;
+
+
+import org.assignment1.models.Entry;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.numberOfWindowsToBe;
+
+public class Scraper {
+
+    protected WebDriver driver;
+
+    protected WebDriverWait wait;
+
+    protected ArrayList&lt;Entry&gt; entries;
+
+<span class="fc" id="L29">    public Scraper(WebDriver driver, WebDriverWait wait) {</span>
+<span class="fc" id="L30">        this.driver = driver;</span>
+<span class="fc" id="L31">        this.wait = wait;</span>
+<span class="fc" id="L32">        this.entries = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L33">    }</span>
+
+    public ArrayList&lt;Entry&gt; getEntries(int amount, String searchText, int type) {
+        try {
+<span class="fc" id="L37">            driver.get(&quot;https://www.ebay.com/&quot;);</span>
+<span class="fc" id="L38">            String findButtonXpath = &quot;//*[@id=\&quot;gh-ac\&quot;]&quot;;</span>
+<span class="fc" id="L39">            wait.until(ExpectedConditions.elementToBeClickable(By.xpath(findButtonXpath)));</span>
+
+<span class="fc" id="L41">            WebElement searchField = driver.findElement(By.xpath(findButtonXpath));</span>
+<span class="fc" id="L42">            searchField.sendKeys(searchText);</span>
+<span class="fc" id="L43">            WebElement searchButton = driver.findElement(By.xpath(&quot;//*[@id=\&quot;gh-btn\&quot;]&quot;));</span>
+<span class="fc" id="L44">            searchButton.submit();</span>
+<span class="fc" id="L45">            wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(&quot;//*[@id=\&quot;mainContent\&quot;]&quot;))));</span>
+
+<span class="fc" id="L47">            String originalWindow = driver.getWindowHandle();</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">            for (int i = 1; i &lt; amount+1; i++) {</span>
+<span class="fc" id="L49">                String productUrl = driver.findElement(By.xpath(&quot;//*[@id=\&quot;srp-river-results\&quot;]/ul/li[&quot; + i + &quot;]/div/div[1]/div/a&quot;)).getAttribute(&quot;href&quot;);</span>
+<span class="fc" id="L50">                String imageUrl = driver.findElement(By.xpath(&quot;//*[@id=\&quot;srp-river-results\&quot;]/ul/li[&quot; + i + &quot;]/div/div[1]/div/a/div/img&quot;)).getAttribute(&quot;src&quot;);</span>
+<span class="fc" id="L51">                String heading = driver.findElement(By.xpath(&quot;//*[@id=\&quot;srp-river-results\&quot;]/ul/li[&quot; + i + &quot;]/div/div[2]/a/div/span&quot;)).getText();</span>
+<span class="fc" id="L52">                driver.findElement(By.xpath(&quot;//*[@id=\&quot;srp-river-results\&quot;]/ul/li[&quot; + i + &quot;]/div/div[2]/a/div/span&quot;)).click();</span>
+<span class="fc" id="L53">                wait.until(numberOfWindowsToBe(2));</span>
+
+<span class="fc" id="L55">                String windowToCloseHandle = &quot;&quot;;</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">                for (String windowHandle : driver.getWindowHandles()) {</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">                    if (!originalWindow.contentEquals(windowHandle)) {</span>
+<span class="fc" id="L58">                        driver.switchTo().window(windowHandle);</span>
+<span class="fc" id="L59">                        windowToCloseHandle = windowHandle;</span>
+<span class="fc" id="L60">                        break;</span>
+                    }
+<span class="fc" id="L62">                }</span>
+
+<span class="fc" id="L64">                String price = driver.findElement(By.xpath(&quot;//*[@id=\&quot;prcIsum\&quot;]&quot;)).getText();</span>
+<span class="fc" id="L65">                String newPrice = transformPrice(price);</span>
+
+<span class="fc" id="L67">                String descriptionLink = driver.findElement(By.xpath(&quot;//*[@id=\&quot;desc_ifr\&quot;]&quot;)).getAttribute(&quot;src&quot;);</span>
+<span class="fc" id="L68">                String html = this.getHtml(descriptionLink);</span>
+<span class="fc" id="L69">                Document doc = Jsoup.parse(html);</span>
+<span class="fc" id="L70">                String description = doc.body().text();</span>
+
+<span class="fc" id="L72">                entries.add(new Entry(Integer.toString(type), heading, description, productUrl, imageUrl, newPrice));</span>
+<span class="fc" id="L73">                driver.switchTo().window(windowToCloseHandle).close();</span>
+<span class="fc" id="L74">                driver.switchTo().window(originalWindow);</span>
+            }
+<span class="fc" id="L76">        } catch (Exception e) {</span>
+<span class="fc" id="L77">            e.printStackTrace();</span>
+<span class="fc" id="L78">        }</span>
+<span class="fc" id="L79">        driver.quit();</span>
+
+<span class="fc" id="L81">        return entries;</span>
+    }
+
+    public String transformPrice(String price) {
+<span class="fc" id="L85">        String newPrice = price.replaceAll(&quot;[\\D]&quot;, &quot;&quot;);</span>
+<span class="fc bfc" id="L86" title="All 2 branches covered.">        if (!newPrice.equals(&quot;&quot;)) {</span>
+<span class="fc" id="L87">            return newPrice;</span>
+        }
+
+<span class="fc" id="L90">        return &quot;&quot;;</span>
+    }
+
+    private String getHtml(String urlPath) {
+<span class="fc" id="L94">        StringBuilder description = new StringBuilder();</span>
+        try {
+<span class="nc" id="L96">            URL url = new URL(urlPath);</span>
+<span class="nc" id="L97">            URLConnection conn = url.openConnection();</span>
+
+            // open the stream and put it into BufferedReader
+<span class="nc" id="L100">            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));</span>
+            String input;
+<span class="nc bnc" id="L102" title="All 2 branches missed.">            while ((input = br.readLine()) != null) {</span>
+<span class="nc" id="L103">                description.append(input);</span>
+            }
+<span class="nc" id="L105">            br.close();</span>
+<span class="fc" id="L106">        } catch (IOException e) {</span>
+<span class="fc" id="L107">            e.printStackTrace();</span>
+<span class="nc" id="L108">        }</span>
+<span class="fc" id="L109">        return description.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
